@@ -16,7 +16,7 @@
 
                     Bienvenue vous avez étés connectés :D 
 <br><br>
-                    <a name="" id="" class="btn btn-success" href="#" role="button">Aller à la To-Do List</a>
+                    <a name="" id="" class="btn btn-success" href="todo" role="button">Aller à la To-Do List</a>
                 </div>
             </div>
         </div>
