@@ -15,7 +15,9 @@ class TodoController extends Controller
     public function index()
     {
         
-        $tasks = DB::table('tasks')->get();
+        $tasks = DB::table('tasks')
+        ->orderBy('id', 'desc')
+        ->get();
         return view('todo', ['tasks' => $tasks]);
     }
 
@@ -37,7 +39,10 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('tasks')->insert(
+            ['task_value' => $request['task_value'], 'task_status' => 'unchecked']
+        );
+        return redirect('todo');
     }
 
     /**
@@ -71,7 +76,10 @@ class TodoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        DB::table('tasks')
+            ->where('id', $id)
+            ->update(['task_status' => $request['taskSTAT']]);
     }
 
     /**
@@ -82,6 +90,7 @@ class TodoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('tasks')->where('id', $id )->delete();
+        return redirect('todo');
     }
 }
