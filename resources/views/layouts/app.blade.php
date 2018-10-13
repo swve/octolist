@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="https://bootswatch.com/4/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="https://bootswatch.com/4/lux/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
